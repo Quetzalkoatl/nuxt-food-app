@@ -1,6 +1,7 @@
 export const state = () => ({
 	foodCategories: [],
 	currentCategory: [],
+	recipe: [],
 });
 
 // export const getters = {
@@ -15,6 +16,9 @@ export const mutations = {
 	},
 	setCurrentCategory: (state, payload) => {
 		state.currentCategory = payload;
+	},
+	setRecipe: (state, payload) => {
+		state.recipe = payload;
 	},
 };
 
@@ -37,5 +41,15 @@ export const actions = {
 		const data = await response.json();
 
 		commit('setCurrentCategory', data.meals);
+	},
+
+	async fetchRecipe({commit}, id) {
+		const response = await fetch(
+			`https://themealdb.com/api/json/v1/1/lookup.php?i=${id}`
+		);
+
+		const data = await response.json();
+
+		commit('setRecipe', data.meals);
 	},
 };
