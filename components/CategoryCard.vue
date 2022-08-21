@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<v-card class="mx-auto" max-width="344">
+		<v-card class="mx-auto" max-width="400">
 			<v-img :src="poster" height="200px"></v-img>
 
 			<v-card-title> {{ title }} </v-card-title>

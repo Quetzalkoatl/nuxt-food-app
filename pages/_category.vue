@@ -5,7 +5,7 @@
 				<v-col
 					v-for="recipe in currentCategory"
 					:key="recipe.idMeal"
-					md="4"
+					md="3"
 					offset-md="4"
 				>
 					<RecipeCard

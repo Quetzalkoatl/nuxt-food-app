@@ -5,7 +5,7 @@
 				<v-col
 					v-for="category in foodCategories"
 					:key="category.id"
-					md="4"
+					md="3"
 					offset-md="4"
 				>
 					<CategoryCard
