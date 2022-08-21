@@ -36,8 +36,8 @@ export default {
 	},
 	computed: {
 		description: function () {
-			return this.subtitle.length > 100
-				? this.subtitle.substring(0, 100) + '...'
+			return this.subtitle.length > 50
+				? this.subtitle.substring(0, 50) + '...'
 				: this.subtitle;
 		},
 	},
