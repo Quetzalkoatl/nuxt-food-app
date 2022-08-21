@@ -5,7 +5,9 @@
 
 			<v-card-title> {{ title }} </v-card-title>
 
-			<v-card-subtitle> {{ description }} </v-card-subtitle>
+			<v-card-subtitle class="card-subtitle">
+				{{ description }}
+			</v-card-subtitle>
 
 			<v-card-actions>
 				<v-btn class="ma-2" color="red">

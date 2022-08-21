@@ -1,18 +1,40 @@
 <template>
-	<footer class="footer">
-		<v-col> {{ new Date().getFullYear() }} — <strong>Food App </strong> </v-col>
-	</footer>
+	<div class="footer">
+		<p class="title">
+			{{ new Date().getFullYear() }}
+		</p>
+	</div>
 </template>
 
 <script>
-export default {};
+export default {
+	methods: {
+		goPrev() {
+			this.$router.go(-1);
+		},
+		goNext() {
+			this.$router.go(1);
+		},
+	},
+};
 </script>
 
 <style lang="scss" scoped>
 .footer {
-	text-align: center;
-	background-color: rgb(194, 194, 194);
+	width: 100%;
+	height: 80px;
+	background-color: rgb(84, 104, 117);
 	margin: 0;
-	padding: 5px 0;
+	padding: 0;
+	position: relative;
+}
+
+.title {
+	color: white;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 24px;
 }
 </style>
